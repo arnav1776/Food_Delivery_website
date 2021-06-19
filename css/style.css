@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* CSS Variables */
 :root{
     --navbar-height: 59px;
@@ -13,6 +17,20 @@
 #navbar{
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.9;
 }
 
 /* Navigation Bar: Logo and Image */
@@ -21,6 +39,78 @@
 }
 
 #logo img{
-    height: 100px;
+    height: 59px;
     margin: 3px 6px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* home section */
+#Home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+#Home::before{
+    content: "";
+    background: url('../bg.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity: 0.25;
+}
+
+#Home h1{
+    color: rgb(5, 0, 0);
+    text-align: center;
+}
+
+#Home p{
+    color: rgb(5, 0, 0);
+    text-align: center;
+    font-size: 1.5rem;
+}
+/*utility class*/
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid black;
+    background-color: rgb(143, 56, 56);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
 }
