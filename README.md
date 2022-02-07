@@ -1,2 +1,2 @@
 # Food_Delivery_website
-Responsive Website Using HTML  & CSS
+Responsive Food Delivery Website using HTML & CSS
